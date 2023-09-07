@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form">
+        <div>
+            <label for="kapacitas">Kapacitás</label>
+            <input type="number" min="0" id="kapacitas">
+            <select id="kapacitas-select">
+                <option value="Mb">Mb</option>
+                <option value="Gb">Gb</option>
+                <option value="Tb">Tb</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="sebesseg">Átviteli sebesség</label>
+            <input type="range" min="0" max="5000" step="100" id="sebesseg">
+            <span id="range-value"></span>
+            <select id="sebesseg-select">
+                <option value="mbps">mbps</option>
+                <option value="Kbps">Kbps</option>
+                <option value="Mbps">Mbps</option>
+                <option value="Gbps">Gbps</option>
+            </select>
+        </div>
+
+        <div class="kiszamol-div">
+            <button type="submit" id="kiszamol-button">Kiszámol</button>
+        </div>
+
+        <p>Eredmény: <span id="eredmeny">-</span></p>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
